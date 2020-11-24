@@ -15,12 +15,12 @@ namespace ProyectoPreventasProSis
     public partial class DetalleProductos : ContentPage
     {
         public int Id;
-        public DetalleProductos(int id, string nombre, string codigo, int stock, int activo, double precio)
+        public DetalleProductos(int id, string nombre, string codigo, int stock, int activo, double precio, string titulo)
         {
             InitializeComponent();
 
             this.Id = id;
-
+            lblTitulo.Text = titulo;
             lblId.Text = id.ToString();
             txtNombre.Text = nombre;
             txtCodigo.Text = codigo;
@@ -46,24 +46,42 @@ namespace ProyectoPreventasProSis
             objeto.codigo = txtCodigo.Text;
             objeto.stock = Convert.ToInt32(txtStock.Text);
             objeto.precio = Convert.ToDouble(txtPrecio.Text);
-            if (swActivar.IsToggled)
+
+            if(Id == 0)
             {
                 objeto.activo = 1;
-                mensaje = "Producto actualizado correctamente.";
+                mensaje = "Producto creado correctamente.";
             }
             else
             {
-                objeto.activo = 0;
-                mensaje = "Producto eliminado correctamente.";
+                if (swActivar.IsToggled)
+                {
+                    objeto.activo = 1;
+                    mensaje = "Producto actualizado correctamente.";
+                }
+                else
+                {
+                    objeto.activo = 0;
+                    mensaje = "Producto eliminado correctamente.";
+                }
             }
-
-
+            
             try
             {
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(objeto);
 
                 Constantes constante = new Constantes();
-                string url = constante.servidor + "actualizar-producto/" + Id;
+                string url;
+
+                if (Id == 0)
+                {
+                    url = constante.servidor + "crear-producto";
+                }
+                else
+                {
+                    url = constante.servidor + "actualizar-producto/" + Id;
+                }
+
                 var request = new HttpRequestMessage();
                 request.RequestUri = new Uri(url);
                 request.Method = HttpMethod.Post;

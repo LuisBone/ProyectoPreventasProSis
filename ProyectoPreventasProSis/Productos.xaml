@@ -7,10 +7,11 @@
             <Label Text="Lista de Productos" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Crear" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
 
     <StackLayout Padding="30,10">
-
-        <Button Text="consultar" x:Name="btnConsulta" Clicked="btnConsulta_Clicked"></Button>
 
         <ListView x:Name="myListView" ItemTapped="myListView_ItemTapped" HasUnevenRows="True">
             <ListView.ItemTemplate>

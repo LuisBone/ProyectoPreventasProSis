@@ -4,7 +4,7 @@
              x:Class="ProyectoPreventasProSis.DetalleProductos">
     <NavigationPage.TitleView>
         <StackLayout>
-            <Label Text="Editar" FontSize="Large"   HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblTitulo" FontSize="Large"   HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
