@@ -77,7 +77,7 @@ namespace ProyectoPreventasProSis
                     string content = await response.Content.ReadAsStringAsync();
 
                     await DisplayAlert("Ok", mensaje, "ok");
-                    await Navigation.PushAsync(new MainPage());
+                    await Navigation.PushAsync(new Productos());
                 }
                 else
                 {
