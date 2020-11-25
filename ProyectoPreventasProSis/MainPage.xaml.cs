@@ -32,7 +32,7 @@ namespace ProyectoPreventasProSis
 
         private async void btnListaPedidos_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Productos());
+            await Navigation.PushAsync(new Pedidos());
         }
     }
 }
