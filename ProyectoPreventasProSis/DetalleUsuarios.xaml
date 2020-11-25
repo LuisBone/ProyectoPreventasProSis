@@ -2,11 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPreventasProSis.DetalleUsuarios">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label x:Name="lblTitulo" FontSize="Large"   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Padding="10,0">
+                <Label Text="Usuario" FontSize="Large" HorizontalOptions="Center"/>
+                <Entry x:Name="txtUsuario" FontSize="Large" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Padding="10,0">
+                <Label Text="Nombre" FontSize="Large" HorizontalOptions="Center"/>
+                <Entry x:Name="txtNombre" FontSize="Large" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Padding="10,0">
+                <Label Text="Clave" FontSize="Large" HorizontalOptions="Center"/>
+                <Entry x:Name="txtClave" FontSize="Large" HorizontalTextAlignment="Center" IsPassword="True"/>
+            </StackLayout>
+            <StackLayout Padding="10,0">
+                <Label Text="Telefono" FontSize="Large" HorizontalOptions="Center"/>
+                <Entry x:Name="txtTelefono" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Padding="10,0">
+                <Label Text="Correo" FontSize="Large" HorizontalOptions="Center"/>
+                <Entry x:Name="txtCorreo" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Email"/>
+            </StackLayout>
+            <StackLayout Padding="10,10" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label  Text="Eliminar" TextColor="red" FontSize="Large" HorizontalOptions="Center" />
+                    <Label  Text="|" FontSize="Large" HorizontalOptions="Center" />
+                    <Label  Text="Activar" TextColor="Green" FontSize="Large" HorizontalOptions="Center" />
+                </StackLayout>
+                <Switch x:Name="swActivar" IsToggled="True" HorizontalOptions="Center" VerticalOptions="Center" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="ThumbColor"
+                                                Value="MediumSpringGreen" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="ThumbColor"
+                                            Value="Red" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Switch>
+            </StackLayout>
+            
+            <StackLayout Padding="50,0">
+                <Button Text="Guardar" FontSize="Medium" x:Name="btnGuardar" Clicked="btnGuardar_Clicked" BackgroundColor="#3492eb" TextColor="White" CornerRadius="50"></Button>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
