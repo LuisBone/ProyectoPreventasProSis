@@ -22,7 +22,7 @@ namespace ProyectoPreventasProSis
 
         private async void btnListaUsuarios_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Productos());
+            await Navigation.PushAsync(new Usuarios());
         }
 
         private async void btnListaProductos_Clicked(object sender, EventArgs e)
