@@ -18,5 +18,10 @@
             <Label Text="Seleccionar Vendedor" FontSize="Large"></Label>
             <Picker x:Name="pkUsuarios" ItemDisplayBinding="{Binding nombre}" SelectedIndexChanged="pkUsuarios_SelectedIndexChanged" />
         </StackLayout>
+
+        <StackLayout Padding="50,20">
+            <Button Text="Siguiente" x:Name="btnSiguiente" Clicked="btnSiguiente_Clicked" CornerRadius="50" BackgroundColor="#3492eb"/>
+        </StackLayout>
     </StackLayout>
+    
 </ContentPage>

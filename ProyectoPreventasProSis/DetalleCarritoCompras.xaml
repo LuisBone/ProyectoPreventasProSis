@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPreventasProSis.DetalleCarritoCompras">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Carrito de compras" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <StackLayout Padding="30,0">
+            <Label Text="Cliente" FontSize="Large"></Label>
+            <Entry x:Name="txtCliente" IsReadOnly="True"/>
+        </StackLayout>
+
+        <StackLayout Padding="30,5">
+            <Label Text="Seleccionar Producto" FontSize="Large"></Label>
+            <Picker FontSize="Small" x:Name="pkProducto" ItemDisplayBinding="{Binding nombre}" SelectedIndexChanged="pkProducto_SelectedIndexChanged" TextColor="White" Visual="Default"/>
+        </StackLayout>
+        <StackLayout Padding="30,5" Orientation="Horizontal">
+            <ListView x:Name="myListView" ItemTapped="myListView_ItemTapped" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout  Orientation="Vertical">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                        <Label Text="{Binding cantidad}" FontSize="Large" TextColor="#428af5" />
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout x:Name="stkProducto">
+            
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

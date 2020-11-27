@@ -17,6 +17,9 @@ namespace ProyectoPreventasProSis
     {
         public List<Ws.ItemCliente> ListaClientes;
         public List<Ws.ItemUsuario> ListaUsuarios;
+        public Ws.ItemCliente ClienteSeleccionado;
+        public Ws.ItemUsuario UsuarioSeleccionado;
+        public int Id = 0;
 
         public DetallePedido()
         {
@@ -108,7 +111,7 @@ namespace ProyectoPreventasProSis
         {
             Picker picker = sender as Picker;
             var selectedItem = picker.SelectedItem;
-            Ws.ItemCliente cli = (Ws.ItemCliente)selectedItem;
+            ClienteSeleccionado = (Ws.ItemCliente)selectedItem;
 
             //await DisplayAlert("ok", cli.id.ToString(), "ok");
 
@@ -118,9 +121,14 @@ namespace ProyectoPreventasProSis
         {
             Picker picker = sender as Picker;
             var selectedItem = picker.SelectedItem;
-            Ws.ItemUsuario cli = (Ws.ItemUsuario)selectedItem;
+            UsuarioSeleccionado = (Ws.ItemUsuario)selectedItem;
 
             //await DisplayAlert("ok", cli.id.ToString(), "ok");
+        }
+
+        private async void btnSiguiente_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleCarritoCompras(ClienteSeleccionado, UsuarioSeleccionado));
         }
     }
 }
