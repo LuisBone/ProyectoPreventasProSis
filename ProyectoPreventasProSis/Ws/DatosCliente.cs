@@ -6,6 +6,9 @@ namespace ProyectoPreventasProSis.Ws
 {
     public class ItemCliente
     {
+
+        //cliente 
+
         public int id { get; set; }
         public string identificacion { get; set; }
         public string nombre { get; set; }
