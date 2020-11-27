@@ -4,6 +4,10 @@ using System.Text;
 
 namespace ProyectoPreventasProSis.Ws
 {
+
+    /// <summary>
+    /// SADSADFASDDFF
+    /// </summary>
     public class ItemCliente
     {
         public int id { get; set; }
