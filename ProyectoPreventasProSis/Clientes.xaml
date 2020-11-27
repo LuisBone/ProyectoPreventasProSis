@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPreventasProSis.Clientes">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Lista de Clientes" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Crear" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="30,10">
+
+        <ListView x:Name="myListView" ItemTapped="myListView_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout  Orientation="Vertical">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                    <Label Text="{Binding identificacion}" FontSize="Large" TextColor="#428af5" />
+                                    <Label Text="{Binding nombre}" TextColor="#503026" FontSize="Medium" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                   
+                                    <Label Text="{Binding telefono}"  TextColor="#503026" FontSize="Medium"/>
+                                    <Label Text="{Binding correo}"  TextColor="#503026" FontSize="Medium"/>
+                                    <Label Text="{Binding direccion}"  TextColor="#503026" FontSize="Medium"/>
+                                    <Label Text="{Binding pais}"  TextColor="#503026" FontSize="Medium"/>
+                                    <Label Text="{Binding ciudad}"  TextColor="#503026" FontSize="Medium"/>
+                                    <Label Text="{Binding activo}"  TextColor="#503026" FontSize="Medium"/>
+                        
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
