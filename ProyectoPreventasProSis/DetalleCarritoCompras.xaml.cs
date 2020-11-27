@@ -69,13 +69,24 @@ namespace ProyectoPreventasProSis
             Picker picker = sender as Picker;
             var selectedItem = picker.SelectedItem;
             Ws.Item ItemSeleccionado = (Ws.Item)selectedItem;
+
             Ws.DatosLista Item1 = new Ws.DatosLista();
+
             Item1.producto = ItemSeleccionado;
             Item1.cantidad = 1;
             Item1.precio = ItemSeleccionado.precio;
+
             Carrito.Add(Item1);
 
-            myListView.ItemsSource = Carrito;
+            ListaProducto.Add(ItemSeleccionado);
+            myListView.ItemsSource = ListaProducto;
+
+            List<Ws.Item> ListaProducto1 = new List<Ws.Item>();
+
+            foreach(Ws.Item lista in ListaProducto)
+            {
+
+            }
 
             Button boton = new Button { Text = "X", HorizontalOptions = LayoutOptions.CenterAndExpand, BackgroundColor = Color.Red, FontSize = 35};
 
@@ -94,7 +105,7 @@ namespace ProyectoPreventasProSis
         
             };
 
-            stkProducto.Children.Add(stackLayout1);
+            //stkProducto.Children.Add(stackLayout1);
 
         }
 

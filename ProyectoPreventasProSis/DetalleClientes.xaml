@@ -14,12 +14,16 @@
                 <Label x:Name="lblId" FontSize="Large" />
             </StackLayout>
 
-            <StackLayout  Padding="10,10">
+            <StackLayout  Padding="10,5">
                 <Label  Text="identificacion" FontSize="Large" HorizontalOptions="Center" />
                 <Entry  x:Name="txtIdentificacion" FontSize="Large" HorizontalTextAlignment="Center" />
             </StackLayout>
-            
- 
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Padding="10,5">
+                <Label  Text="correo" FontSize="Large" HorizontalOptions="Center" />
+                <Entry  x:Name="txtCorreo" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+            </StackLayout>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -31,41 +35,35 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
-                    <ColumnDefinition />
 
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Row="0" Grid.Column="0" Padding="10,0">
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="10,5">
                     <Label Text="Descripción" FontSize="Large" HorizontalOptions="Center"/>
                     <Entry x:Name="txtNombre" FontSize="Large" HorizontalTextAlignment="Center"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="0" Grid.Column="1" Padding="10,10">
+                <StackLayout Grid.Row="0" Grid.Column="1" Padding="10,5">
                     <Label  Text="telefono" FontSize="Large" HorizontalOptions="Center" />
                     <Entry  x:Name="txtTelefono" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="1" Grid.Column="0" Padding="10,10">
-                    <Label  Text="correo" FontSize="Large" HorizontalOptions="Center" />
-                    <Entry  x:Name="txtCorreo" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
-                </StackLayout>
-
-                <StackLayout Grid.Row="2" Grid.Column="0" Padding="10,10">
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="10,5">
                     <Label  Text="direccion" FontSize="Large" HorizontalOptions="Center" />
                     <Entry  x:Name="txtDireccion" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="2" Grid.Column="1" Padding="10,10">
+                <StackLayout Grid.Row="1" Grid.Column="1" Padding="10,5">
                     <Label  Text="pais" FontSize="Large" HorizontalOptions="Center" />
                     <Entry  x:Name="txtPais" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" Grid.Column="0" Padding="10,10">
+                <StackLayout Grid.Row="2" Grid.Column="0" Padding="10,5">
                     <Label  Text="ciudad" FontSize="Large" HorizontalOptions="Center" />
                     <Entry  x:Name="txtCiudad" FontSize="Large" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" Grid.Column="1" Padding="10,10">
+                <StackLayout Grid.Row="2" Grid.Column="1" Padding="10,5">
                     <StackLayout Orientation="Horizontal">
                         <Label  Text="Eliminar" TextColor="red" FontSize="Large" HorizontalOptions="Center" />
                         <Label  Text="|" FontSize="Large" HorizontalOptions="Center" />
@@ -92,7 +90,7 @@
                     </Switch>
                 </StackLayout>
             </Grid>
-            <StackLayout Padding="50,30">
+            <StackLayout Padding="50,10">
                 <Button Text="Guardar" FontSize="Medium" x:Name="btnGuardar" Clicked="btnGuardar_Clicked" BackgroundColor="#3492eb" TextColor="White" CornerRadius="50"></Button>
             </StackLayout>
 

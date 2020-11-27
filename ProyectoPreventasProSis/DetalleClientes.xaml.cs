@@ -22,7 +22,7 @@ namespace ProyectoPreventasProSis
             this.Id = id;
             lblTitulo.Text = titulo;
             lblId.Text = id.ToString();
-            //txtIdentificacion = identificacion;
+            txtIdentificacion.Text = identificacion;
             txtNombre.Text = nombre;
             txtTelefono.Text = telefono;
             txtCorreo.Text = correo;
@@ -102,7 +102,6 @@ namespace ProyectoPreventasProSis
                     string content = await response.Content.ReadAsStringAsync();
 
                     await DisplayAlert("Ok", mensaje, "ok");
-                    await Navigation.PushAsync(new Clientes());
                 }
                 else
                 {

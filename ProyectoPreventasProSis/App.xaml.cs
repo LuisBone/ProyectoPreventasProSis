@@ -10,7 +10,7 @@ namespace ProyectoPreventasProSis
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()

@@ -17,7 +17,7 @@ namespace ProyectoPreventasProSis
 
         private async void btnListaClientes_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Productos());
+            await Navigation.PushAsync(new Clientes());
         }
 
         private async void btnListaUsuarios_Clicked(object sender, EventArgs e)

@@ -88,7 +88,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logoPresis.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProyectoPreventasProSis\ProyectoPreventasProSis.csproj">
       <Project>{02DFFE55-FF57-4AA0-A276-5E0813D0EDF2}</Project>
