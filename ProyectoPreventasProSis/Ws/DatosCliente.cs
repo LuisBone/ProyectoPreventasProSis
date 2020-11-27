@@ -8,6 +8,7 @@ namespace ProyectoPreventasProSis.Ws
     {
 
         //cliente 
+        //funciono 
 
         public int id { get; set; }
         public string identificacion { get; set; }
