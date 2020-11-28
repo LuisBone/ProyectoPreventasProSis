@@ -79,15 +79,11 @@ namespace ProyectoPreventasProSis
             Carrito.Add(Item1);
 
             ListaProducto.Add(ItemSeleccionado);
-            myListView.ItemsSource = ListaProducto;
+            //myListView.ItemsSource = ListaProducto;
 
             List<Ws.Item> ListaProducto1 = new List<Ws.Item>();
 
-            foreach(Ws.Item lista in ListaProducto)
-            {
-
-            }
-
+            
             Button boton = new Button { Text = "X", HorizontalOptions = LayoutOptions.CenterAndExpand, BackgroundColor = Color.Red, FontSize = 35};
 
             boton.Clicked += DetalleCarritoCompras_Clicked;
@@ -100,12 +96,13 @@ namespace ProyectoPreventasProSis
                 {
                     new Label { Text = ItemSeleccionado.nombre, VerticalTextAlignment = TextAlignment.Center, Padding = 20, FontSize = 22 },
                     new Entry { Text = "1", Keyboard = Keyboard.Numeric },
+                    new Label { Text = ItemSeleccionado.precio.ToString(), VerticalTextAlignment = TextAlignment.Center, Padding = 20, FontSize = 22 },
                     boton                    
                 }
         
             };
 
-            //stkProducto.Children.Add(stackLayout1);
+            stkProducto.Children.Add(stackLayout1);
 
         }
 
