@@ -19,16 +19,16 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackLayout Grid.Row="0" Grid.Column="0" Padding="5,5">
-            <Button Text="Clientes" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" x:Name="btnListaClientes" Clicked="btnListaClientes_Clicked"/>
+            <Button Text="Clientes" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" x:Name="btnListaClientes" Clicked="btnListaClientes_Clicked"/>
         </StackLayout>
         <StackLayout Grid.Row="0" Grid.Column="1" Padding="5,5">
             <Button Text="Usuarios" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" x:Name="btnListaUsuarios" Clicked="btnListaUsuarios_Clicked"/>
         </StackLayout>
         <StackLayout Grid.Row="1" Grid.Column="0" Padding="5,5">
-            <Button Text="Productos" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" x:Name="btnListaProductos" Clicked="btnListaProductos_Clicked"/>
+            <Button Text="Productos" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="Green" x:Name="btnListaProductos" Clicked="btnListaProductos_Clicked"/>
         </StackLayout>
         <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,5">
-            <Button Text="Pedidos" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" x:Name="btnListaPedidos" Clicked="btnListaPedidos_Clicked"/>
+            <Button Text="Pedidos" FontSize="Large" VerticalOptions="FillAndExpand" BackgroundColor="Aqua" x:Name="btnListaPedidos" Clicked="btnListaPedidos_Clicked"/>
         </StackLayout>
     </Grid>
 
